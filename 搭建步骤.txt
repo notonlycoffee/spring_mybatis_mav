@@ -1,0 +1,26 @@
+1.创建maven webapp 架构文件
+
+2.添加pom.xml文件的内容，这里添加了很多jar包的申明
+
+3.创建目录结构：
+	在src/main/java中创建目录：
+		com.wwq.frame
+			controller   接手用户请求的controller
+			domain		实体类
+			mapper		mapper.java，这里不存放mapper.xml，但是可以批量扫描
+			service.userService		service接口
+				impl				service接口实现类
+	在src/main/resources中创建目录：
+		com.wwq.frame.mapper		存放mapper.xml文件，包名跟mapper.java的一样，就可以批量扫描
+		mybatis				mybatis配置文件
+		spring				spring配置文件
+			applicationContext-dao.xml
+			appilcationContext-service.xml
+			applicationContext-tx.xml
+			spring-mvc.xml
+		db.properties		数据库配置文件
+		log4j.properties	日志配置文件
+		
+总结：
+	使用maven配置的好处就是利用pom.xml文件中管理相对的jar文件
+		
